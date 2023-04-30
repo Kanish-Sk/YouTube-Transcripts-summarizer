@@ -1,0 +1,47 @@
+{% extends "layout.html"%} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='/style/form.css') }}"
+/>
+{% endblock %} {% block body %}
+<img
+  src="{{ url_for('static', filename='images/youtube-logo.png') }}"
+  height="100"
+  width="100"
+  alt="YouTube Icon"
+/>
+<h1 style="font-weight: 300">YouTube Transcript Summarizer</h1>
+<h3 style="font-family: 'Open Sans', sans-serif; font-weight: 300">
+  Get Summarization Done<br />Directly within your browser.
+</h3>
+<form action="" method="POST" novalidate>
+  {{ form.hidden_tag() }} {{ form.link.label(class_="form__label") }} {{
+  form.link(class_="form__field form__link") }} {%for error in form.link.errors
+  %}
+  <span class="form__error">{{ error }}</span>
+  {% endfor %}
+
+  <p class="tips">Tip:YouTube video URL with subtitle</p>
+
+  {{ form.algorithm.label(class_="form__label") }} {{
+  form.algorithm(class_="form__field") }}
+
+  <p class="tips">
+    Tip:Use Text Rank Algorithm(Gensim) if you don't know about these
+    techaniques
+  </p>
+  {{ form.percentage.label(class_="form__label") }} {{
+  form.percentage(class_="form__field percentage__field") }} {%for error in
+  form.percentage.errors %}
+  <span class="form__error">{{ error }}</span>
+  {% endfor %}
+
+  <p class="tips">
+    Tip:Enter 20 or 30<br />Summary will be presented in approx. X% lines of the
+    available transcript
+  </p>
+
+  {{ form.submit(class_="button") }}
+</form>
+
+{% endblock %}

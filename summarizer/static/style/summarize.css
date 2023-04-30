@@ -1,0 +1,76 @@
+.success-logo {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subtitle {
+  text-align: justify;
+  border: 4px solid black;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.lower {
+  display: flex;
+  flex-direction: row;
+}
+
+.details {
+  border: 4px solid black;
+  align-items: right;
+  width: fit-content;
+  padding: 10px;
+  padding-bottom: 20px;
+  height: 80px;
+  margin-top: 30px;
+}
+
+.details-text {
+  font-size: 20px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-text {
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid rgb(3, 3, 3);
+  background-color: rgb(198, 198, 198);
+  color: black;
+  padding: 10px 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-text:hover {
+  border: 1px solid rgb(195, 16, 16);
+  background-color: rgb(255, 47, 47);
+  color: white;
+}
+
+.fa {
+  margin-left: 5px;
+}
+
+.failed {
+  font-size: 40px;
+  color: red;
+  font-weight: 800;
+}
+
+.fail-message {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}

@@ -1,0 +1,61 @@
+.form__label {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.form__link {
+  margin: 0;
+}
+
+.form__field {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: left;
+  padding: 3px 0;
+}
+
+.form__link {
+  padding: 3px 0 3px 4px;
+}
+
+.form__error {
+  display: block;
+  text-align: left;
+  width: inherit;
+  margin-top: -10px;
+  font-size: small;
+  padding: 8px;
+  color: red;
+}
+
+.percentage__field {
+  padding-left: 5px;
+}
+
+.tips {
+  margin-top: 0;
+  color: grey;
+  font-size: 13px;
+}
+
+.button {
+  border: 1px solid rgb(3, 3, 3);
+  background-color: rgb(198, 198, 198);
+  color: black;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 20%;
+}
+
+.button:hover {
+  border: 1px solid rgb(195, 16, 16);
+  background-color: rgb(255, 47, 47);
+  color: white;
+}

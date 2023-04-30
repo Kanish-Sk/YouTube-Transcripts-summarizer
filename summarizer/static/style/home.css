@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  padding: 20px;
+  display: table;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  background-color: white;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+select {
+  width: 90%;
+}
+
+label {
+  font-size: 13px;
+}
+
+input {
+  width: 90%;
+  margin-top: 20px;
+}
+
+#text-out {
+  margin: 10px auto;
+  font-size: 14px;
+  color: black;
+}
+
+.dropdown-text {
+  font-size: 14px;
+}

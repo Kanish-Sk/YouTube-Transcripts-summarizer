@@ -1,0 +1,2 @@
+FLASK_APP=summarizer
+FLASK_ENV=development

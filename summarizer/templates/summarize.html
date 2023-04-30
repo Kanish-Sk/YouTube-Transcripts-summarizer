@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='/style/summarize.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+{% endblock %} {% block body %} {% if success %}
+<div class="top">
+  <img
+    src="{{ url_for('static', filename='images/success.jpeg') }}"
+    height="150"
+    width="400"
+    alt="Sucessfull"
+    class="success-logo"
+  />
+  <div class="details">
+    <div class="details-text">
+      <div class="left-text">Original length:</div>
+      <div class="right-text">{{response['length_original'] }}</div>
+    </div>
+    <div class="details-text">
+      <div class="left-text">Summary length:</div>
+      <div class="right-text">{{response['length_summary'] }}</div>
+    </div>
+    <div class="details-text">
+      <div class="left-text">Original sentance:</div>
+      <div class="right-text">{{response['sentence_original'] }}</div>
+    </div>
+    <div class="details-text">
+      <div class="left-text">summary sentance:</div>
+      <div class="right-text">{{response['sentence_summary'] }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="subtitle">
+  {% for str in response['processed_summary'] %}
+  <li class="inner-text">{{str}}</li>
+  {% endfor %}
+</div>
+
+{% else %}
+<div class="failed">Failed</div>
+<div class="fail-message">{{message}}</div>
+{% endif %}
+
+<a class="btn-text" href="{{ url_for('.home') }}">
+  Back <i class="fa fa-arrow-circle-left"></i>
+</a>
+
+{% endblock %}
